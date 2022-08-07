@@ -241,11 +241,11 @@ Branching
 ---------
 
 Most large code bases have at least two branches - a ‘master’ or 'main' branch and a
-‘development’ branch. The master branch is code which is OK to be deployed
+‘development’ branch. The main branch is code which is OK to be deployed
 on to a website, or downloaded by customers. The development branch
 allows developers to work on features which might not be bug free. Only
 once everyone is happy with the development branch would it be merged
-with the master branch.
+with the main branch.
 
 Creating a branch in Git is easy. The `git branch` command, when used by
 itself, will list the branches you currently have
@@ -253,7 +253,7 @@ itself, will list the branches you currently have
     $ git branch
 
 The `*` should indicate the current branch you are on, which is
-`master`.
+`main`.
 
 If you wish to start another branch, use
 `git checkout -b (new-branch-name)` :
@@ -267,7 +267,7 @@ Try git branch again to check which branch you are currently on:
 
     $ git branch
       jeroen-egelmeers
-    * master
+    * main
 
 The new branch is now created. Now let’s work in that branch. To switch
 to the new branch:
@@ -282,12 +282,12 @@ Let’s perform some commits now,
     $ git add test.txt
     $ git commit -m "Added experimental txt"
 
-Now, let’s compare them to the master branch. Use `git diff`
+Now, let’s compare them to the develop branch. Use `git diff`
 
-    $ git diff master
+    $ git diff main
 
 Basically what the above output says is that `test.txt` is present on
-the `jeroen-egelmeers` branch, but is absent on the `development` or `master` branch.
+the `jeroen-egelmeers` branch, but is absent on the `develop` or `main` branch.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Help-browser.svg/20px-Help-browser.svg.png)
 Stuck? Ask for help from the workshop staff
@@ -296,15 +296,15 @@ Now you see me, now you don’t
 -----------------------------
 
 Git is good enough to handle your files when you switch between
-branches. Switch back to the `master` branch
+branches. Switch back to the `main` branch
 
-Try switching back to the master branch (Hint: It’s the same command we
-used to switch to the exp1 branch above)
+Try switching back to the main branch (Hint: It’s the same command we
+used to switch to the branch with your name above)
 
 Now, where’s our `test.txt` file ?
 
     $ ls
-    README.textile  alice.txt   bob.txt     gamow.txt
+    README.textile  alice.txt   bob.txt     alpher.txt
 
 As you can see the new file you created in the other branch has
 disappeared. Not to worry, it is safely tucked away, and will re-appear
@@ -326,7 +326,7 @@ together after the conclusion of work.
 Git merging works by first switching the branch you want to *into*, and
 then running the command to merge the other branch in.
 
-We now want to merge our `jeroen-egelmeers` (but then your own) branch into `master`. First, switch to
+We now want to merge our `jeroen-egelmeers` (but then your own) branch into `develop`. First, switch to
 the `develop` branch.
 
     git checkout develop
@@ -485,45 +485,10 @@ You have learnt :
 9. Pull Requests (including WIP/DRAFT)
 10. Fixing conflicts
 
-Now You can choose two tracks, either Part II (below) which covers time travel and
-mangling your git history, or Part III (even below-er) which covers Github pull
-requests and cat gifs.
+Next time someone is asking you something about Git, you're ready to answer them! Congratulations!
+Want to learn more? Try to create your very own repository, and start playing!
 
-Part II
-=======
-
-Check out the `revert` branch on this repository for further instructions!
-You can always get back to this version of the readme by checking out the master
-branch.
-
-Part III
-========
-
-GitHub
-------
-But, wait. There’s more. What about this distributed sharing thing with
-Git ?
-
-To be able to share, we’ll need a server to host our git repositiories.
-GitHub (<a href="https://github.com/">github.com</a>) is probably the
-easiest place to begin with.
-
-Login or sign up with GitHub
-----------------------------
-
-If you've already got an account you can skip on to creating the repo on
-github, or forking this repository and cloning it down to your local machine.
-
-Otherwise...
-
-Go <a href="https://github.com/signup">sign up for an account</a> at
-GitHub; Or login into your GitHub account if you had previously signed
-up.
-
-Hint: You may need to setup git cache your GitHub password - see
-<a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a>
-
-Then come back here, we’ll wait.
+I wish you a wonderful day!
 
 Create your first GitHub repository
 -----------------------------------
@@ -573,4 +538,3 @@ Author: Thong Kuah
 Contributors: Andy Newport, Nick Malcolm
 
 Was editted for internal use by Jeroen Egelmeers
-
